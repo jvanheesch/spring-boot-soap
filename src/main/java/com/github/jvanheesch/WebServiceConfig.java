@@ -57,9 +57,6 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     public Wss4jSecurityInterceptor securityInterceptor() {
         Wss4jSecurityInterceptor securityInterceptor = new Wss4jSecurityInterceptor();
         securityInterceptor.setValidationActions("UsernameToken");
-        securityInterceptor.setSecurementMustUnderstand(true);
-        securityInterceptor.setSecurementUsername("setusername");
-        securityInterceptor.setSecurementPassword("setpassword");
         securityInterceptor.setValidationCallbackHandler(securityCallbackHandler());
         return securityInterceptor;
     }
